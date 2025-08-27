@@ -12,7 +12,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Install rust
-        uses: bash ci/install-rust.sh stable aarch64-unknown-linux-musl
+        run: bash ci/install-rust.sh stable aarch64-unknown-linux-musl
       - name: Install dependencies
         run: cargo install mdbook
       - name: Build book
