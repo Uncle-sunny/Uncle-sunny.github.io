@@ -1,0 +1,36 @@
+name: learning book build and push
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Install rust
+        uses: bash ci/install-rust.sh stable aarch64-unknown-linux-musl
+      - name: Install dependencies
+        run: cargo install mdbook
+      - name: Build book
+        run: mdbook build
+      - name: Push book to GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./book
+      - name: Deploy book to GitHub Pages
+        uses: actions/deploy-pages@v3
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

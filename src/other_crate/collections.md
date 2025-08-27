@@ -10,6 +10,9 @@ cargo add hashbrown
 ## crossbeam
 高效的无锁并发队列，支持多生产者 - 多消费者（MPMC）模型
 
+```sh
+cargo add crossbeam
+```
 
 ## indexmap
 保留了插入顺序的HashMap
