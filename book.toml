@@ -8,4 +8,4 @@ title = "rust learning book"
 edition = "2024"
 
 [output.html]
-site-url = "learn"
+site-url = "/learn/"
