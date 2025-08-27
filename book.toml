@@ -1,0 +1,8 @@
+[book]
+authors = ["uncle-sunny"]
+language = "en"
+src = "src"
+title = "rust learning book"
+
+[output.html]
+site-url = "learn"
