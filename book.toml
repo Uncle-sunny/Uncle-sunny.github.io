@@ -4,8 +4,11 @@ language = "en"
 src = "src"
 title = "rust learning book"
 
+[preprocessor.links]
+
 [rust]
 edition = "2024"
 
 [output.html]
 site-url = "/rust-book/"
+git-repository-url = "https://github.com/Uncle-sunny/rust-book"
