@@ -484,3 +484,5 @@ tokio = { workspace = true, features = ["rt-multi-thread", "macros"] }
 serde = "1.0.130"
 migration = { path = "../migration" }
 ```
+
+如果有什么错误或者遗漏的地方欢迎批评指正
