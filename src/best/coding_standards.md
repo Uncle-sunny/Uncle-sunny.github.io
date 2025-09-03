@@ -8,7 +8,9 @@
 
 ```rust
 const MY_CONSTANT: u32 = 42;
+
 fn func_name() {}
+
 let mut my_variable = 42;
 ```
 
